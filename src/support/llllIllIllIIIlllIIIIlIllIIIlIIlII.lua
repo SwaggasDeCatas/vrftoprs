@@ -30,7 +30,9 @@ local v_u_25 = {}
 local function v_u_26()
 	return false
 end
-local v_u_27 = v_u_4:WaitForChild("FallClientRemote")
+local v_u_27 = {
+	Fire = function() end,
+}
 local v_u_28 = v_u_4:WaitForChild("TripRemote")
 local v_u_29 = v_u_4:WaitForChild("PullRemote")
 local v_u_31 = v_u_4:WaitForChild("CatchRemote")
