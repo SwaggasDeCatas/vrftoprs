@@ -27,7 +27,9 @@ local v_u_22 = v18:WaitForChild("AngleBar")
 local v_u_23 = v_u_22:WaitForChild("AB")
 local v_u_24 = v18:WaitForChild("SixSecond")
 local v_u_25 = {}
-local v_u_26 = v_u_4:WaitForChild("HumanoidStateRemote")
+local function v_u_26()
+	return false
+end
 local v_u_27 = v_u_4:WaitForChild("FallClientRemote")
 local v_u_28 = v_u_4:WaitForChild("TripRemote")
 local v_u_29 = v_u_4:WaitForChild("PullRemote")
@@ -175,7 +177,7 @@ function v_u_1.CheckHold(_)
 end
 function v_u_1.CheckState(_)
 	-- upvalues: (copy) v_u_26, (copy) v_u_1
-	if not v_u_26:Invoke() and v_u_1:CheckHold() then
+	if not v_u_26() and v_u_1:CheckHold() then
 		return true
 	end
 end

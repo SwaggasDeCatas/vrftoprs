@@ -16,7 +16,7 @@ return function(_)
 	local v_u_11 = require(v8:WaitForChild("llllIllIllIIIlllIIIIlIllIIIlIIlII"))
 	local v_u_12 = require(v8:WaitForChild("IlllIlIIIlIlllIIlIlIlIllllIIllIII"))
 	local v_u_13 = require(v8:WaitForChild("lIIllllIIllIllIIllIIIIIlIllIllllI"))
-	local v14 = v9:WaitForChild("HumanoidStateRemote")
+	local v14 = {}
 	local v_u_15 = v9:WaitForChild("FallClientRemote")
 	local v_u_16 = v9:WaitForChild("RagdollRemote")
 	local v17 = v9:WaitForChild("TripRemote")

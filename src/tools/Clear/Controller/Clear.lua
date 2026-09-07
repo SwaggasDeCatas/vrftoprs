@@ -52,7 +52,7 @@ local l_ClientModules_0 = game:GetService("Players").LocalPlayer:WaitForChild("P
 local l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0 = require(l_ClientModules_0:WaitForChild("llllIllIllIIIlllIIIIlIllIIIlIIlII"));
 local l_llIIllIIlllIIIIIlIIIIIIlIlIlIIIlI_0 = require(l_ClientModules_0:WaitForChild("llIIllIIlllIIIIIlIIIIIIlIlIlIIIlI"));
 local l_IlllIlIIIlIlllIIlIlIlIllllIIllIII_0 = require(l_ClientModules_0:WaitForChild("IlllIlIIIlIlllIIlIlIlIllllIIllIII"));
-local l_HumanoidStateRemote_0 = l_ReplicatedStorage_0:WaitForChild("Remotes"):WaitForChild("HumanoidStateRemote");
+local l_IsHumanoidStateBlocked_0 = function() return false end;
 local l_l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0_Limbs_0 = l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:GetLimbs(l_Character_0, l_Humanoid_0);
 local l_Animations_0 = l_LocalPlayer_0:WaitForChild("PlayerGui"):WaitForChild("Animations");
 local v21 = l_Humanoid_0:LoadAnimation(l_Animations_0.KickCharge.RightChargeStart);
@@ -211,7 +211,7 @@ local v79 = false;
 local v80 = false;
 v8.Activate = function(v81, v82, _) --[[ Line: 215 ]]
 	if v82 == Enum.UserInputState.Begin then
-		if not l_HumanoidStateRemote_0:Invoke() and not l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:CheckDebounce(2) then
+		if not l_IsHumanoidStateBlocked_0() and not l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:CheckDebounce(2) then
 			if v81 == "Delayed" and not v80 then
 				return;
 			elseif l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:CheckDebounce2(1) and v81 ~= "Delayed" then

@@ -39,7 +39,7 @@ local l_ClientModules_0 = game:GetService("Players").LocalPlayer:WaitForChild("P
 local v76 = l_require_0(l_ClientModules_0:WaitForChild("llllIllIllIIIlllIIIIlIllIIIlIIlII"));
 local v77 = l_require_0(l_ClientModules_0:WaitForChild("llIIllIIlllIIIIIlIIIIIIlIlIlIIIlI"));
 local v78 = l_require_0(l_ClientModules_0:WaitForChild("IlllIlIIIlIlllIIlIlIlIllllIIllIII"));
-local l_HumanoidStateRemote_0 = l_ReplicatedStorage_0:WaitForChild("Remotes"):WaitForChild("HumanoidStateRemote");
+local l_IsHumanoidStateBlocked_0 = function() return false end;
 local l_v76_Limbs_0 = v76:GetLimbs(l_Character_0, l_Humanoid_0);
 local l_Animations_0 = l_LocalPlayer_0:WaitForChild("PlayerGui"):WaitForChild("Animations");
 local v82 = l_Humanoid_0:LoadAnimation(l_Animations_0.Clear.Throw.RightThrowStart);
@@ -81,7 +81,7 @@ end;
 v69.Activate = function(_, v102, _) --[[ Line: 154 ]]
 	if v102 == l_Enum_0.UserInputState.Begin then
 		local l_LocalBWeld_0 = l_Character_0:FindFirstChild("LocalBWeld");
-		if not v76:CheckHold() and not l_HumanoidStateRemote_0:Invoke() and l_LocalBWeld_0 and not v76:CheckDebounce() and l_LocalBWeld_0.Part0 then
+		if not v76:CheckHold() and not l_IsHumanoidStateBlocked_0() and l_LocalBWeld_0 and not v76:CheckDebounce() and l_LocalBWeld_0.Part0 then
 			v76:SetDebounce(true, 3);
 			v89 = l_v76_LegSwitch_0.Value;
 			v90 = true;
