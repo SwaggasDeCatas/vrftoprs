@@ -1,0 +1,1801 @@
+{
+  "tools": [
+    {
+      "path": "ServerStorage.Assets.Tools.Clear",
+      "properties": {
+        "ManualActivationOnly": false,
+        "Name": "Clear",
+        "Enabled": true,
+        "RequiresHandle": false,
+        "ToolTip": "",
+        "CanBeDropped": false,
+        "TextureId": ""
+      },
+      "class": "Tool"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.Dribble",
+      "properties": {
+        "ManualActivationOnly": false,
+        "Name": "Dribble",
+        "Enabled": true,
+        "RequiresHandle": false,
+        "ToolTip": "",
+        "CanBeDropped": false,
+        "TextureId": ""
+      },
+      "class": "Tool"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.Long",
+      "properties": {
+        "ManualActivationOnly": false,
+        "Name": "Long",
+        "Enabled": true,
+        "RequiresHandle": false,
+        "ToolTip": "",
+        "CanBeDropped": false,
+        "TextureId": ""
+      },
+      "class": "Tool"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.Pass",
+      "properties": {
+        "ManualActivationOnly": false,
+        "Name": "Pass",
+        "Enabled": true,
+        "RequiresHandle": false,
+        "ToolTip": "",
+        "CanBeDropped": false,
+        "TextureId": ""
+      },
+      "class": "Tool"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.Shoot",
+      "properties": {
+        "ManualActivationOnly": false,
+        "Name": "Shoot",
+        "Enabled": true,
+        "RequiresHandle": false,
+        "ToolTip": "",
+        "CanBeDropped": false,
+        "TextureId": ""
+      },
+      "class": "Tool"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.Tackle",
+      "properties": {
+        "ManualActivationOnly": false,
+        "Name": "Tackle",
+        "Enabled": true,
+        "RequiresHandle": false,
+        "ToolTip": "",
+        "CanBeDropped": false,
+        "TextureId": ""
+      },
+      "class": "Tool"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.TI",
+      "properties": {
+        "ManualActivationOnly": false,
+        "Name": "TI",
+        "Enabled": true,
+        "RequiresHandle": false,
+        "ToolTip": "",
+        "CanBeDropped": false,
+        "TextureId": ""
+      },
+      "class": "Tool"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.TI.Controller.Drop.Drop",
+      "properties": {
+        "Value": "G"
+      },
+      "class": "StringValue"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.TI.Controller.KeepDown.KeepDown",
+      "properties": {
+        "Value": "F"
+      },
+      "class": "StringValue"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.TI.Controller.KeepDown.KeepDown.KeepUp",
+      "properties": {
+        "Value": "R"
+      },
+      "class": "StringValue"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.TI.Controller.KeepUp.KeepUp",
+      "properties": {
+        "Value": "R"
+      },
+      "class": "StringValue"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.TI.Controller.KeepUp.KeepUp.KeepDown",
+      "properties": {
+        "Value": "F"
+      },
+      "class": "StringValue"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.TI.Controller.Throw.Throw",
+      "properties": {
+        "Value": "UIT_MouseButton1"
+      },
+      "class": "StringValue"
+    },
+    {
+      "path": "ServerStorage.Assets.Tools.TI.Controller.Throw.Throw.Cancel",
+      "properties": {
+        "Value": "G"
+      },
+      "class": "StringValue"
+    }
+  ],
+  "animations": [
+    {
+      "id": "rbxassetid://131651722379704",
+      "path": "StarterGui.Animations.AirPump"
+    },
+    {
+      "id": "rbxassetid://121248512724182",
+      "path": "StarterGui.Animations.Ankled.BackAnkled"
+    },
+    {
+      "id": "rbxassetid://90408440763173",
+      "path": "StarterGui.Animations.Ankled.DefaultAnkled"
+    },
+    {
+      "id": "rbxassetid://129957561165617",
+      "path": "StarterGui.Animations.Ankled.FowardAnkled"
+    },
+    {
+      "id": "rbxassetid://106676490375011",
+      "path": "StarterGui.Animations.Ankled.FowardLeftAnkled"
+    },
+    {
+      "id": "rbxassetid://98798054500856",
+      "path": "StarterGui.Animations.Ankled.FowardRightAnkled"
+    },
+    {
+      "id": "rbxassetid://78543221183662",
+      "path": "StarterGui.Animations.Ankled.LeftAnkled"
+    },
+    {
+      "id": "rbxassetid://131851898786175",
+      "path": "StarterGui.Animations.Ankled.RightAnkled"
+    },
+    {
+      "id": "rbxassetid://108957383482236",
+      "path": "StarterGui.Animations.ArmSwingHere"
+    },
+    {
+      "id": "rbxassetid://77695694297037",
+      "path": "StarterGui.Animations.AwesomeDance"
+    },
+    {
+      "id": "rbxassetid://113058687906797",
+      "path": "StarterGui.Animations.BackFlip"
+    },
+    {
+      "id": "rbxassetid://88584880669006",
+      "path": "StarterGui.Animations.BaseBallBat"
+    },
+    {
+      "id": "rbxassetid://127457298024694",
+      "path": "StarterGui.Animations.BellySlide"
+    },
+    {
+      "id": "rbxassetid://100158165042978",
+      "path": "StarterGui.Animations.BelowTheKnee"
+    },
+    {
+      "id": "rbxassetid://117918947172202",
+      "path": "StarterGui.Animations.BigMan"
+    },
+    {
+      "id": "rbxassetid://93359000993486",
+      "path": "StarterGui.Animations.BOI"
+    },
+    {
+      "id": "rbxassetid://109920654639016",
+      "path": "StarterGui.Animations.CantHearU"
+    },
+    {
+      "id": "rbxassetid://120222947781844",
+      "path": "StarterGui.Animations.Clapping"
+    },
+    {
+      "id": "rbxassetid://132579049680202",
+      "path": "StarterGui.Animations.Clear.Bounce.BallBounce"
+    },
+    {
+      "id": "rbxassetid://115740711921027",
+      "path": "StarterGui.Animations.Clear.Catch.ArmsHighCatch"
+    },
+    {
+      "id": "rbxassetid://110210762011093",
+      "path": "StarterGui.Animations.Clear.Catch.ArmsLowCatch"
+    },
+    {
+      "id": "rbxassetid://91297481459318",
+      "path": "StarterGui.Animations.Clear.Catch.HighMidPickup"
+    },
+    {
+      "id": "rbxassetid://79788428392088",
+      "path": "StarterGui.Animations.Clear.Catch.HighPickup"
+    },
+    {
+      "id": "rbxassetid://78839197388548",
+      "path": "StarterGui.Animations.Clear.Catch.LeftHighPickup"
+    },
+    {
+      "id": "rbxassetid://115379599937815",
+      "path": "StarterGui.Animations.Clear.Catch.LeftLowPickup"
+    },
+    {
+      "id": "rbxassetid://83443815372701",
+      "path": "StarterGui.Animations.Clear.Catch.LowCatch"
+    },
+    {
+      "id": "rbxassetid://78217307006356",
+      "path": "StarterGui.Animations.Clear.Catch.LowMidPickup"
+    },
+    {
+      "id": "rbxassetid://78906553193778",
+      "path": "StarterGui.Animations.Clear.Catch.LowPickup"
+    },
+    {
+      "id": "rbxassetid://135547998044428",
+      "path": "StarterGui.Animations.Clear.Catch.RightHighPickup"
+    },
+    {
+      "id": "rbxassetid://90485461335319",
+      "path": "StarterGui.Animations.Clear.Catch.RightLowPickup"
+    },
+    {
+      "id": "rbxassetid://91096272011504",
+      "path": "StarterGui.Animations.Clear.Catch.UpperCatch"
+    },
+    {
+      "id": "rbxassetid://124183665405273",
+      "path": "StarterGui.Animations.Clear.Clear.ClearLeftLoop"
+    },
+    {
+      "id": "rbxassetid://104696947956703",
+      "path": "StarterGui.Animations.Clear.Clear.ClearLeftStart"
+    },
+    {
+      "id": "rbxassetid://134012299586203",
+      "path": "StarterGui.Animations.Clear.Clear.ClearRightLoop"
+    },
+    {
+      "id": "rbxassetid://78525979099573",
+      "path": "StarterGui.Animations.Clear.Clear.ClearRightStart"
+    },
+    {
+      "id": "rbxassetid://80209443091771",
+      "path": "StarterGui.Animations.Clear.DropBall"
+    },
+    {
+      "id": "rbxassetid://111921433213960",
+      "path": "StarterGui.Animations.Clear.DropBallUp"
+    },
+    {
+      "id": "rbxassetid://100991523742471",
+      "path": "StarterGui.Animations.Clear.HeadBlock"
+    },
+    {
+      "id": "rbxassetid://131070447143466",
+      "path": "StarterGui.Animations.Clear.HighDive.Back.BackLeftEnd"
+    },
+    {
+      "id": "rbxassetid://79178742747455",
+      "path": "StarterGui.Animations.Clear.HighDive.Back.BackRightEnd"
+    },
+    {
+      "id": "rbxassetid://101120799404239",
+      "path": "StarterGui.Animations.Clear.HighDive.Back.LateAirEnd"
+    },
+    {
+      "id": "rbxassetid://98052962312767",
+      "path": "StarterGui.Animations.Clear.HighDive.Back.Start"
+    },
+    {
+      "id": "rbxassetid://94080128396385",
+      "path": "StarterGui.Animations.Clear.HighDive.Front.FrontEnd"
+    },
+    {
+      "id": "rbxassetid://135447847078431",
+      "path": "StarterGui.Animations.Clear.HighDive.Front.FrontLeftEnd"
+    },
+    {
+      "id": "rbxassetid://138166341107582",
+      "path": "StarterGui.Animations.Clear.HighDive.Front.FrontRightEnd"
+    },
+    {
+      "id": "rbxassetid://130057105261221",
+      "path": "StarterGui.Animations.Clear.HighDive.Front.LateAirEnd"
+    },
+    {
+      "id": "rbxassetid://136341739070970",
+      "path": "StarterGui.Animations.Clear.HighDive.Front.Start"
+    },
+    {
+      "id": "rbxassetid://93683586533859",
+      "path": "StarterGui.Animations.Clear.HighDive.Left.AirEnd"
+    },
+    {
+      "id": "rbxassetid://101386257515521",
+      "path": "StarterGui.Animations.Clear.HighDive.Left.BackEnd"
+    },
+    {
+      "id": "rbxassetid://90164917430597",
+      "path": "StarterGui.Animations.Clear.HighDive.Left.FrontEnd"
+    },
+    {
+      "id": "rbxassetid://131651485966627",
+      "path": "StarterGui.Animations.Clear.HighDive.Left.JumpEnd"
+    },
+    {
+      "id": "rbxassetid://122777589565531",
+      "path": "StarterGui.Animations.Clear.HighDive.Left.LateAirEnd"
+    },
+    {
+      "id": "rbxassetid://126835835007253",
+      "path": "StarterGui.Animations.Clear.HighDive.Left.LeftEnd"
+    },
+    {
+      "id": "rbxassetid://92350972625634",
+      "path": "StarterGui.Animations.Clear.HighDive.Left.RightEnd"
+    },
+    {
+      "id": "rbxassetid://111276392922815",
+      "path": "StarterGui.Animations.Clear.HighDive.Left.Start"
+    },
+    {
+      "id": "rbxassetid://127392711218832",
+      "path": "StarterGui.Animations.Clear.HighDive.Right.AirEnd"
+    },
+    {
+      "id": "rbxassetid://88300900772539",
+      "path": "StarterGui.Animations.Clear.HighDive.Right.BackEnd"
+    },
+    {
+      "id": "rbxassetid://123026090100337",
+      "path": "StarterGui.Animations.Clear.HighDive.Right.FrontEnd"
+    },
+    {
+      "id": "rbxassetid://114294314481311",
+      "path": "StarterGui.Animations.Clear.HighDive.Right.JumpEnd"
+    },
+    {
+      "id": "rbxassetid://87834790385160",
+      "path": "StarterGui.Animations.Clear.HighDive.Right.LateAirEnd"
+    },
+    {
+      "id": "rbxassetid://100589427577607",
+      "path": "StarterGui.Animations.Clear.HighDive.Right.LeftEnd"
+    },
+    {
+      "id": "rbxassetid://81507674802959",
+      "path": "StarterGui.Animations.Clear.HighDive.Right.RightEnd"
+    },
+    {
+      "id": "rbxassetid://96305803962899",
+      "path": "StarterGui.Animations.Clear.HighDive.Right.Start"
+    },
+    {
+      "id": "rbxassetid://118789581388513",
+      "path": "StarterGui.Animations.Clear.HighDive.Stand.AirEnd"
+    },
+    {
+      "id": "rbxassetid://112503417181812",
+      "path": "StarterGui.Animations.Clear.LABlock"
+    },
+    {
+      "id": "rbxassetid://102519311363257",
+      "path": "StarterGui.Animations.Clear.LLBlock"
+    },
+    {
+      "id": "rbxassetid://74606619338148",
+      "path": "StarterGui.Animations.Clear.LowDive.Back.BackEnd"
+    },
+    {
+      "id": "rbxassetid://117702899400548",
+      "path": "StarterGui.Animations.Clear.LowDive.Back.FrontRightEnd"
+    },
+    {
+      "id": "rbxassetid://133765981055993",
+      "path": "StarterGui.Animations.Clear.LowDive.Back.JumpEnd"
+    },
+    {
+      "id": "rbxassetid://125622027917760",
+      "path": "StarterGui.Animations.Clear.LowDive.Back.RightEnd"
+    },
+    {
+      "id": "rbxassetid://124563366112086",
+      "path": "StarterGui.Animations.Clear.LowDive.Back.Start"
+    },
+    {
+      "id": "rbxassetid://103579734721466",
+      "path": "StarterGui.Animations.Clear.LowDive.Front.FrontLeftEnd"
+    },
+    {
+      "id": "rbxassetid://116774562500384",
+      "path": "StarterGui.Animations.Clear.LowDive.Front.FrontRightEnd"
+    },
+    {
+      "id": "rbxassetid://93817626967868",
+      "path": "StarterGui.Animations.Clear.LowDive.Front.Start"
+    },
+    {
+      "id": "rbxassetid://118389222032686",
+      "path": "StarterGui.Animations.Clear.LowDive.Left.BackEnd"
+    },
+    {
+      "id": "rbxassetid://97788576344405",
+      "path": "StarterGui.Animations.Clear.LowDive.Left.FrontEnd"
+    },
+    {
+      "id": "rbxassetid://91058312009109",
+      "path": "StarterGui.Animations.Clear.LowDive.Left.JumpEnd"
+    },
+    {
+      "id": "rbxassetid://135864498292804",
+      "path": "StarterGui.Animations.Clear.LowDive.Left.LeftEnd"
+    },
+    {
+      "id": "rbxassetid://85144444254126",
+      "path": "StarterGui.Animations.Clear.LowDive.Left.RightEnd"
+    },
+    {
+      "id": "rbxassetid://76946299542363",
+      "path": "StarterGui.Animations.Clear.LowDive.Left.Start"
+    },
+    {
+      "id": "rbxassetid://136289602501308",
+      "path": "StarterGui.Animations.Clear.LowDive.r.BackEnd"
+    },
+    {
+      "id": "rbxassetid://115259285128430",
+      "path": "StarterGui.Animations.Clear.LowDive.r.FrontEnd"
+    },
+    {
+      "id": "rbxassetid://120883196057025",
+      "path": "StarterGui.Animations.Clear.LowDive.r.JumpEnd"
+    },
+    {
+      "id": "rbxassetid://128764938753445",
+      "path": "StarterGui.Animations.Clear.LowDive.r.LeftEnd"
+    },
+    {
+      "id": "rbxassetid://121726313198999",
+      "path": "StarterGui.Animations.Clear.LowDive.r.RightEnd"
+    },
+    {
+      "id": "rbxassetid://77572905734479",
+      "path": "StarterGui.Animations.Clear.LowDive.r.Start"
+    },
+    {
+      "id": "rbxassetid://136289602501308",
+      "path": "StarterGui.Animations.Clear.LowDive.Right.BackEnd"
+    },
+    {
+      "id": "rbxassetid://115259285128430",
+      "path": "StarterGui.Animations.Clear.LowDive.Right.FrontEnd"
+    },
+    {
+      "id": "rbxassetid://120883196057025",
+      "path": "StarterGui.Animations.Clear.LowDive.Right.JumpEnd"
+    },
+    {
+      "id": "rbxassetid://128764938753445",
+      "path": "StarterGui.Animations.Clear.LowDive.Right.LeftEnd"
+    },
+    {
+      "id": "rbxassetid://108031730626263",
+      "path": "StarterGui.Animations.Clear.LowDive.Right.RightEnd"
+    },
+    {
+      "id": "rbxassetid://82672053833794",
+      "path": "StarterGui.Animations.Clear.LowDive.Right.Start"
+    },
+    {
+      "id": "rbxassetid://115958661307343",
+      "path": "StarterGui.Animations.Clear.LowDive.Stand.StandEnd"
+    },
+    {
+      "id": "rbxassetid://129044380815102",
+      "path": "StarterGui.Animations.Clear.Punch.PunchLeft"
+    },
+    {
+      "id": "rbxassetid://76204908290519",
+      "path": "StarterGui.Animations.Clear.Punch.PunchRight"
+    },
+    {
+      "id": "rbxassetid://94830160688227",
+      "path": "StarterGui.Animations.Clear.RABlock"
+    },
+    {
+      "id": "rbxassetid://122650110091297",
+      "path": "StarterGui.Animations.Clear.RLBlock"
+    },
+    {
+      "id": "rbxassetid://114767621790617",
+      "path": "StarterGui.Animations.Clear.Save"
+    },
+    {
+      "id": "rbxassetid://135828981290658",
+      "path": "StarterGui.Animations.Clear.Throw.LeftThrowHigh"
+    },
+    {
+      "id": "rbxassetid://71900090951448",
+      "path": "StarterGui.Animations.Clear.Throw.LeftThrowLow"
+    },
+    {
+      "id": "rbxassetid://83388643537626",
+      "path": "StarterGui.Animations.Clear.Throw.LeftThrowStart"
+    },
+    {
+      "id": "rbxassetid://101698178626358",
+      "path": "StarterGui.Animations.Clear.Throw.RightThrowHigh"
+    },
+    {
+      "id": "rbxassetid://80211575804460",
+      "path": "StarterGui.Animations.Clear.Throw.RightThrowLow"
+    },
+    {
+      "id": "rbxassetid://85085615254651",
+      "path": "StarterGui.Animations.Clear.Throw.RightThrowStart"
+    },
+    {
+      "id": "rbxassetid://93082047808493",
+      "path": "StarterGui.Animations.Clear.TorsoBlock"
+    },
+    {
+      "id": "rbxassetid://113235196904303",
+      "path": "StarterGui.Animations.CoinFlip"
+    },
+    {
+      "id": "rbxassetid://115163481718623",
+      "path": "StarterGui.Animations.CoinFlipRoll"
+    },
+    {
+      "id": "rbxassetid://111608938477889",
+      "path": "StarterGui.Animations.Dab"
+    },
+    {
+      "id": "rbxassetid://135503491045059",
+      "path": "StarterGui.Animations.DanielSturridge"
+    },
+    {
+      "id": "rbxassetid://125022598319248",
+      "path": "StarterGui.Animations.DonaldDance"
+    },
+    {
+      "id": "rbxassetid://73643254909230",
+      "path": "StarterGui.Animations.DribbleTool.AdvRainbow.LeftAdvRainbowEnd"
+    },
+    {
+      "id": "rbxassetid://99595281577983",
+      "path": "StarterGui.Animations.DribbleTool.AdvRainbow.RightAdvRainbowEnd"
+    },
+    {
+      "id": "rbxassetid://102927366381878",
+      "path": "StarterGui.Animations.DribbleTool.AroundTheWorld.LeftAroundTheWorld"
+    },
+    {
+      "id": "rbxassetid://110825691522773",
+      "path": "StarterGui.Animations.DribbleTool.AroundTheWorld.RightAroundTheWorld"
+    },
+    {
+      "id": "rbxassetid://114479757481448",
+      "path": "StarterGui.Animations.DribbleTool.BackFlickUp.LeftBackFlickUp"
+    },
+    {
+      "id": "rbxassetid://86449540039554",
+      "path": "StarterGui.Animations.DribbleTool.BackFlickUp.RightBackFlickUp"
+    },
+    {
+      "id": "rbxassetid://115485130052218",
+      "path": "StarterGui.Animations.DribbleTool.DragTo.LeftSideDrag"
+    },
+    {
+      "id": "rbxassetid://89704114393790",
+      "path": "StarterGui.Animations.DribbleTool.DragTo.RightSideDrag"
+    },
+    {
+      "id": "rbxassetid://87592232625718",
+      "path": "StarterGui.Animations.DribbleTool.Dribble.LeftDribble"
+    },
+    {
+      "id": "rbxassetid://109541989279240",
+      "path": "StarterGui.Animations.DribbleTool.Dribble.RightDribble"
+    },
+    {
+      "id": "rbxassetid://126832678893160",
+      "path": "StarterGui.Animations.DribbleTool.DribbleC.LeftComboZ"
+    },
+    {
+      "id": "rbxassetid://81081141820009",
+      "path": "StarterGui.Animations.DribbleTool.DribbleC.LeftDribbleCNormalEnd"
+    },
+    {
+      "id": "rbxassetid://114299557894083",
+      "path": "StarterGui.Animations.DribbleTool.DribbleC.RightComboZ"
+    },
+    {
+      "id": "rbxassetid://132897716708415",
+      "path": "StarterGui.Animations.DribbleTool.DribbleC.RightDribbleCNormalEnd"
+    },
+    {
+      "id": "rbxassetid://139582488510300",
+      "path": "StarterGui.Animations.DribbleTool.DribbleQ.LeftDribbleQ"
+    },
+    {
+      "id": "rbxassetid://96735740879349",
+      "path": "StarterGui.Animations.DribbleTool.DribbleQ.RightDribbleQ"
+    },
+    {
+      "id": "rbxassetid://112678102781338",
+      "path": "StarterGui.Animations.DribbleTool.DribbleRT.LeftToLeft"
+    },
+    {
+      "id": "rbxassetid://122175931760919",
+      "path": "StarterGui.Animations.DribbleTool.DribbleRT.LeftToRight"
+    },
+    {
+      "id": "rbxassetid://92820357616584",
+      "path": "StarterGui.Animations.DribbleTool.DribbleRT.RightToLeft"
+    },
+    {
+      "id": "rbxassetid://133467863716698",
+      "path": "StarterGui.Animations.DribbleTool.DribbleRT.RightToRight"
+    },
+    {
+      "id": "rbxassetid://128579554352273",
+      "path": "StarterGui.Animations.DribbleTool.FakeExit.LeftFakeExitEnd"
+    },
+    {
+      "id": "rbxassetid://113823157798014",
+      "path": "StarterGui.Animations.DribbleTool.FakeExit.LeftFakeExitStart"
+    },
+    {
+      "id": "rbxassetid://120841119739963",
+      "path": "StarterGui.Animations.DribbleTool.FakeExit.RightFakeExitEnd"
+    },
+    {
+      "id": "rbxassetid://125713447405120",
+      "path": "StarterGui.Animations.DribbleTool.FakeExit.RightFakeExitStart"
+    },
+    {
+      "id": "rbxassetid://134460726797387",
+      "path": "StarterGui.Animations.DribbleTool.Rainbow.LeftRainbow"
+    },
+    {
+      "id": "rbxassetid://97528983513961",
+      "path": "StarterGui.Animations.DribbleTool.Rainbow.RightRainbow"
+    },
+    {
+      "id": "rbxassetid://81551489605630",
+      "path": "StarterGui.Animations.Fire"
+    },
+    {
+      "id": "rbxassetid://89575704824289",
+      "path": "StarterGui.Animations.Floss"
+    },
+    {
+      "id": "rbxassetid://140046401082521",
+      "path": "StarterGui.Animations.FortDefault"
+    },
+    {
+      "id": "rbxassetid://81266383804472",
+      "path": "StarterGui.Animations.FrontFlip"
+    },
+    {
+      "id": "rbxassetid://115260151063733",
+      "path": "StarterGui.Animations.GetUp.BackGetUp"
+    },
+    {
+      "id": "rbxassetid://108270798293260",
+      "path": "StarterGui.Animations.GetUp.FrontGetUp"
+    },
+    {
+      "id": "rbxassetid://125200734206095",
+      "path": "StarterGui.Animations.GetUp.HeadGetUp"
+    },
+    {
+      "id": "rbxassetid://111590556687381",
+      "path": "StarterGui.Animations.GetUp.LeftGetUp"
+    },
+    {
+      "id": "rbxassetid://110002964958322",
+      "path": "StarterGui.Animations.GetUp.RightGetUp"
+    },
+    {
+      "id": "rbxassetid://118997731626762",
+      "path": "StarterGui.Animations.GetUp.StraightGetUp"
+    },
+    {
+      "id": "rbxassetid://104211701074341",
+      "path": "StarterGui.Animations.GunLean"
+    },
+    {
+      "id": "rbxassetid://100298705824070",
+      "path": "StarterGui.Animations.HatKid"
+    },
+    {
+      "id": "rbxassetid://121802275708661",
+      "path": "StarterGui.Animations.Holding.HoldingAnim"
+    },
+    {
+      "id": "rbxassetid://96909830669515",
+      "path": "StarterGui.Animations.Hype"
+    },
+    {
+      "id": "rbxassetid://135503234246314",
+      "path": "StarterGui.Animations.KickCharge.LeftChargeLoop"
+    },
+    {
+      "id": "rbxassetid://122777524620125",
+      "path": "StarterGui.Animations.KickCharge.LeftChargeStart"
+    },
+    {
+      "id": "rbxassetid://111720399303361",
+      "path": "StarterGui.Animations.KickCharge.LeftOneLegCharge"
+    },
+    {
+      "id": "rbxassetid://123983607558564",
+      "path": "StarterGui.Animations.KickCharge.LeftOneLegChargeLoop"
+    },
+    {
+      "id": "rbxassetid://107039406227992",
+      "path": "StarterGui.Animations.KickCharge.RightChargeLoop"
+    },
+    {
+      "id": "rbxassetid://96959646886356",
+      "path": "StarterGui.Animations.KickCharge.RightChargeStart"
+    },
+    {
+      "id": "rbxassetid://86316114731196",
+      "path": "StarterGui.Animations.KickCharge.RightOneLegCharge"
+    },
+    {
+      "id": "rbxassetid://80475784670057",
+      "path": "StarterGui.Animations.KickCharge.RightOneLegChargeLoop"
+    },
+    {
+      "id": "rbxassetid://78266233904645",
+      "path": "StarterGui.Animations.KneeSlide"
+    },
+    {
+      "id": "rbxassetid://100290122678881",
+      "path": "StarterGui.Animations.KOCeleb"
+    },
+    {
+      "id": "rbxassetid://87054579317228",
+      "path": "StarterGui.Animations.LBall"
+    },
+    {
+      "id": "rbxassetid://139496660326651",
+      "path": "StarterGui.Animations.LDance"
+    },
+    {
+      "id": "rbxassetid://138084940521581",
+      "path": "StarterGui.Animations.LeanAndBop"
+    },
+    {
+      "id": "rbxassetid://134899684556770",
+      "path": "StarterGui.Animations.LegDance"
+    },
+    {
+      "id": "rbxassetid://87509585193710",
+      "path": "StarterGui.Animations.LockAndLoad"
+    },
+    {
+      "id": "rbxassetid://140153196413906",
+      "path": "StarterGui.Animations.LongTool.Chip.LeftChip"
+    },
+    {
+      "id": "rbxassetid://88380252982912",
+      "path": "StarterGui.Animations.LongTool.Chip.LeftChipToLeft"
+    },
+    {
+      "id": "rbxassetid://133845918115096",
+      "path": "StarterGui.Animations.LongTool.Chip.LeftChipToRight"
+    },
+    {
+      "id": "rbxassetid://80834065487130",
+      "path": "StarterGui.Animations.LongTool.Chip.RightChip"
+    },
+    {
+      "id": "rbxassetid://110302602749596",
+      "path": "StarterGui.Animations.LongTool.Chip.RightChipToLeft"
+    },
+    {
+      "id": "rbxassetid://110174331559017",
+      "path": "StarterGui.Animations.LongTool.Chip.RightChipToRight"
+    },
+    {
+      "id": "rbxassetid://86926540979352",
+      "path": "StarterGui.Animations.LongTool.PowerSideLong.LongC"
+    },
+    {
+      "id": "rbxassetid://124707470177260",
+      "path": "StarterGui.Animations.LongTool.PowerSideLong.LongZ"
+    },
+    {
+      "id": "rbxassetid://139764649541694",
+      "path": "StarterGui.Animations.LongTool.Rabona.LeftHighRabona"
+    },
+    {
+      "id": "rbxassetid://127884116765020",
+      "path": "StarterGui.Animations.LongTool.Rabona.LeftRabona"
+    },
+    {
+      "id": "rbxassetid://136743332780939",
+      "path": "StarterGui.Animations.LongTool.Rabona.RightHighRabona"
+    },
+    {
+      "id": "rbxassetid://86832231367116",
+      "path": "StarterGui.Animations.LongTool.Rabona.RightRabona"
+    },
+    {
+      "id": "rbxassetid://85910322520440",
+      "path": "StarterGui.Animations.LongTool.Redirect.RedirectLeftL"
+    },
+    {
+      "id": "rbxassetid://110979372941573",
+      "path": "StarterGui.Animations.LongTool.Redirect.RedirectLeftR"
+    },
+    {
+      "id": "rbxassetid://97102460553429",
+      "path": "StarterGui.Animations.LongTool.Redirect.RedirectRightL"
+    },
+    {
+      "id": "rbxassetid://132036970373064",
+      "path": "StarterGui.Animations.LongTool.Redirect.RedirectRightR"
+    },
+    {
+      "id": "rbxassetid://78103221296390",
+      "path": "StarterGui.Animations.MaskCeleb"
+    },
+    {
+      "id": "rbxassetid://85339077026101",
+      "path": "StarterGui.Animations.MillyRock"
+    },
+    {
+      "id": "rbxassetid://107996974103736",
+      "path": "StarterGui.Animations.MoiseKean"
+    },
+    {
+      "id": "rbxassetid://109595398829627",
+      "path": "StarterGui.Animations.Money"
+    },
+    {
+      "id": "rbxassetid://129291698606210",
+      "path": "StarterGui.Animations.Monster"
+    },
+    {
+      "id": "rbxassetid://111282628198023",
+      "path": "StarterGui.Animations.OneHandRaise"
+    },
+    {
+      "id": "rbxassetid://128294854641654",
+      "path": "StarterGui.Animations.OrangeJustice"
+    },
+    {
+      "id": "rbxassetid://115885943730428",
+      "path": "StarterGui.Animations.PassTool.Backheel.LeftBackHeelEnd"
+    },
+    {
+      "id": "rbxassetid://127016252468438",
+      "path": "StarterGui.Animations.PassTool.Backheel.LeftBackHeelLoop"
+    },
+    {
+      "id": "rbxassetid://117272071839954",
+      "path": "StarterGui.Animations.PassTool.Backheel.LeftBackHeelStart"
+    },
+    {
+      "id": "rbxassetid://81631617959723",
+      "path": "StarterGui.Animations.PassTool.Backheel.RightBackHeelEnd"
+    },
+    {
+      "id": "rbxassetid://92470336713930",
+      "path": "StarterGui.Animations.PassTool.Backheel.RightBackHeelLoop"
+    },
+    {
+      "id": "rbxassetid://131458271666974",
+      "path": "StarterGui.Animations.PassTool.Backheel.RightBackHeelStart"
+    },
+    {
+      "id": "rbxassetid://104642834393455",
+      "path": "StarterGui.Animations.PassTool.FakePass.LeftFakePass"
+    },
+    {
+      "id": "rbxassetid://96361776621308",
+      "path": "StarterGui.Animations.PassTool.FakePass.RightFakePass"
+    },
+    {
+      "id": "rbxassetid://114231614857560",
+      "path": "StarterGui.Animations.PassTool.MarkPointAnim.LeftMarkPoint"
+    },
+    {
+      "id": "rbxassetid://79907983185720",
+      "path": "StarterGui.Animations.PassTool.MarkPointAnim.RightMarkPoint"
+    },
+    {
+      "id": "rbxassetid://115553304616236",
+      "path": "StarterGui.Animations.PassTool.Pass.LeftPass"
+    },
+    {
+      "id": "rbxassetid://97287529987760",
+      "path": "StarterGui.Animations.PassTool.Pass.RightPass"
+    },
+    {
+      "id": "rbxassetid://77580914972994",
+      "path": "StarterGui.Animations.PassTool.Request.LeftPassRequest"
+    },
+    {
+      "id": "rbxassetid://73302157173393",
+      "path": "StarterGui.Animations.PassTool.Request.RightPassRequest"
+    },
+    {
+      "id": "rbxassetid://104434523970794",
+      "path": "StarterGui.Animations.PassTool.SidePass.LeftLeftSidePass"
+    },
+    {
+      "id": "rbxassetid://131438599853579",
+      "path": "StarterGui.Animations.PassTool.SidePass.LeftSidePass"
+    },
+    {
+      "id": "rbxassetid://91895346020614",
+      "path": "StarterGui.Animations.PassTool.SidePass.RightRightSidePass"
+    },
+    {
+      "id": "rbxassetid://102023813096869",
+      "path": "StarterGui.Animations.PassTool.SidePass.RightSidePass"
+    },
+    {
+      "id": "rbxassetid://86192357397563",
+      "path": "StarterGui.Animations.PeakABoo"
+    },
+    {
+      "id": "rbxassetid://125661629648906",
+      "path": "StarterGui.Animations.PeriusSit"
+    },
+    {
+      "id": "rbxassetid://78857677257720",
+      "path": "StarterGui.Animations.Posing"
+    },
+    {
+      "id": "rbxassetid://73229417280066",
+      "path": "StarterGui.Animations.PumpkinHead"
+    },
+    {
+      "id": "rbxassetid://72535184320410",
+      "path": "StarterGui.Animations.Rolling"
+    },
+    {
+      "id": "rbxassetid://78182436206909",
+      "path": "StarterGui.Animations.RussianDance"
+    },
+    {
+      "id": "rbxassetid://96860843644882",
+      "path": "StarterGui.Animations.ShootTool.Bicycle.LeftBK"
+    },
+    {
+      "id": "rbxassetid://126058818782481",
+      "path": "StarterGui.Animations.ShootTool.Bicycle.RightBK"
+    },
+    {
+      "id": "rbxassetid://74569568772464",
+      "path": "StarterGui.Animations.ShootTool.DivingHeader.DivingHeader"
+    },
+    {
+      "id": "rbxassetid://88522517969679",
+      "path": "StarterGui.Animations.ShootTool.FakeShoot.LeftFakeShoot"
+    },
+    {
+      "id": "rbxassetid://107433508152173",
+      "path": "StarterGui.Animations.ShootTool.FakeShoot.RightFakeShoot"
+    },
+    {
+      "id": "rbxassetid://73612706614090",
+      "path": "StarterGui.Animations.ShootTool.Header.HeaderEnd"
+    },
+    {
+      "id": "rbxassetid://112049803593747",
+      "path": "StarterGui.Animations.ShootTool.Header.HeaderLeft"
+    },
+    {
+      "id": "rbxassetid://105550168394585",
+      "path": "StarterGui.Animations.ShootTool.Header.HeaderLoop"
+    },
+    {
+      "id": "rbxassetid://110982166680372",
+      "path": "StarterGui.Animations.ShootTool.Header.HeaderRight"
+    },
+    {
+      "id": "rbxassetid://102272632436291",
+      "path": "StarterGui.Animations.ShootTool.Header.HeaderStart"
+    },
+    {
+      "id": "rbxassetid://70801810158647",
+      "path": "StarterGui.Animations.ShootTool.Scissor.LeftScissor"
+    },
+    {
+      "id": "rbxassetid://120133624680944",
+      "path": "StarterGui.Animations.ShootTool.Scissor.RightScissor"
+    },
+    {
+      "id": "rbxassetid://121662646461419",
+      "path": "StarterGui.Animations.ShootTool.Scorpion.LeftScorpion"
+    },
+    {
+      "id": "rbxassetid://86960322404813",
+      "path": "StarterGui.Animations.ShootTool.Scorpion.RightScorpion"
+    },
+    {
+      "id": "rbxassetid://86335170228109",
+      "path": "StarterGui.Animations.ShootTool.Shoot.LeftBackSpin"
+    },
+    {
+      "id": "rbxassetid://138876866701164",
+      "path": "StarterGui.Animations.ShootTool.Shoot.LeftFrontSpin"
+    },
+    {
+      "id": "rbxassetid://104318154024537",
+      "path": "StarterGui.Animations.ShootTool.Shoot.LeftShoot"
+    },
+    {
+      "id": "rbxassetid://125742774039866",
+      "path": "StarterGui.Animations.ShootTool.Shoot.RightBackSpin"
+    },
+    {
+      "id": "rbxassetid://92089381465136",
+      "path": "StarterGui.Animations.ShootTool.Shoot.RightFrontSpin"
+    },
+    {
+      "id": "rbxassetid://103502477554837",
+      "path": "StarterGui.Animations.ShootTool.Shoot.RightShoot"
+    },
+    {
+      "id": "rbxassetid://108600663411227",
+      "path": "StarterGui.Animations.ShootTool.Volley.LeftVolleyEnd"
+    },
+    {
+      "id": "rbxassetid://111856286712572",
+      "path": "StarterGui.Animations.ShootTool.Volley.LeftVolleyLoop"
+    },
+    {
+      "id": "rbxassetid://92226664116071",
+      "path": "StarterGui.Animations.ShootTool.Volley.LeftVolleyStart"
+    },
+    {
+      "id": "rbxassetid://87534436318539",
+      "path": "StarterGui.Animations.ShootTool.Volley.RightVolleyEnd"
+    },
+    {
+      "id": "rbxassetid://113405946175066",
+      "path": "StarterGui.Animations.ShootTool.Volley.RightVolleyLoop"
+    },
+    {
+      "id": "rbxassetid://139074253391217",
+      "path": "StarterGui.Animations.ShootTool.Volley.RightVolleyStart"
+    },
+    {
+      "id": "rbxassetid://74689200822712",
+      "path": "StarterGui.Animations.ShowSlide"
+    },
+    {
+      "id": "rbxassetid://83953604030954",
+      "path": "StarterGui.Animations.ShuffleTruffle"
+    },
+    {
+      "id": "rbxassetid://107951978710795",
+      "path": "StarterGui.Animations.SideFlip"
+    },
+    {
+      "id": "rbxassetid://108747937234107",
+      "path": "StarterGui.Animations.Slap"
+    },
+    {
+      "id": "rbxassetid://100227420751741",
+      "path": "StarterGui.Animations.Sleeping"
+    },
+    {
+      "id": "rbxassetid://93843755510571",
+      "path": "StarterGui.Animations.SpinnyBoy"
+    },
+    {
+      "id": "rbxassetid://130778328740096",
+      "path": "StarterGui.Animations.SpyInsult"
+    },
+    {
+      "id": "rbxassetid://80759902596821",
+      "path": "StarterGui.Animations.TackleTool.Block.Block"
+    },
+    {
+      "id": "rbxassetid://80541022746399",
+      "path": "StarterGui.Animations.TackleTool.Chest.Chest"
+    },
+    {
+      "id": "rbxassetid://119022915180251",
+      "path": "StarterGui.Animations.TackleTool.Pull.LeftPull"
+    },
+    {
+      "id": "rbxassetid://106386050240493",
+      "path": "StarterGui.Animations.TackleTool.Pull.RightPull"
+    },
+    {
+      "id": "rbxassetid://118616220287258",
+      "path": "StarterGui.Animations.TackleTool.Slide.LeftSlide"
+    },
+    {
+      "id": "rbxassetid://81450612172294",
+      "path": "StarterGui.Animations.TackleTool.Slide.LeftSlideY"
+    },
+    {
+      "id": "rbxassetid://81727806303328",
+      "path": "StarterGui.Animations.TackleTool.Slide.RightSlide"
+    },
+    {
+      "id": "rbxassetid://124597167955233",
+      "path": "StarterGui.Animations.TackleTool.Slide.RightSlideY"
+    },
+    {
+      "id": "rbxassetid://78181238810032",
+      "path": "StarterGui.Animations.TackleTool.Stand.LeftStand"
+    },
+    {
+      "id": "rbxassetid://72933397377551",
+      "path": "StarterGui.Animations.TackleTool.Stand.RightStand"
+    },
+    {
+      "id": "rbxassetid://140611100684842",
+      "path": "StarterGui.Animations.TackleTool.WideTackle.LeftWideTackle"
+    },
+    {
+      "id": "rbxassetid://107182050413825",
+      "path": "StarterGui.Animations.TackleTool.WideTackle.RightWideTackle"
+    },
+    {
+      "id": "rbxassetid://125339673496492",
+      "path": "StarterGui.Animations.Telephone"
+    },
+    {
+      "id": "rbxassetid://136917525466806",
+      "path": "StarterGui.Animations.TheX"
+    },
+    {
+      "id": "rbxassetid://101209560822438",
+      "path": "StarterGui.Animations.ThrowIn.TICharge"
+    },
+    {
+      "id": "rbxassetid://131139732118045",
+      "path": "StarterGui.Animations.ThrowIn.TIRelease"
+    },
+    {
+      "id": "rbxassetid://122319086965875",
+      "path": "StarterGui.Animations.TPose"
+    },
+    {
+      "id": "rbxassetid://100610097427333",
+      "path": "StarterGui.Animations.TripleClap"
+    },
+    {
+      "id": "rbxassetid://103886225183145",
+      "path": "StarterGui.Animations.WitchBroom"
+    },
+    {
+      "id": "rbxassetid://71541109096580",
+      "path": "StarterGui.Animations.WizardWand"
+    }
+  ],
+  "keybinds": [
+    {
+      "value": "UIT_MouseButton1",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear"
+    },
+    {
+      "value": "H",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Bounce"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Clear.BackSpin"
+    },
+    {
+      "value": "G",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Clear.Cancel"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Clear.FakeLrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Clear.FakeRrps"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Clear.FrontSpin"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Clear.StopBall"
+    },
+    {
+      "value": "G",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Drop"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.HighDive"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.HighDive.KeepDown"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.HighDive.KeepUp"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.KeepDown"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.KeepDown.KeepUp"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.KeepUp"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.KeepUp.KeepDown"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.LowDive"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.LowDive.KeepDown"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.LowDive.KeepUp"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Punch"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Punch.KeepDown"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Punch.KeepUp"
+    },
+    {
+      "value": "X",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Save"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Throw"
+    },
+    {
+      "value": "G",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Clear.Throw.Cancel"
+    },
+    {
+      "value": "UIT_MouseButton1",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble"
+    },
+    {
+      "value": "M",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.AdvRainbow"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.AdvRainbow.Cancel"
+    },
+    {
+      "value": "H",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.BackheelFlickUp"
+    },
+    {
+      "value": "X",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DragBackToLeft"
+    },
+    {
+      "value": "Z",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DragBackToRight"
+    },
+    {
+      "value": "C",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS.Backheel"
+    },
+    {
+      "value": "X",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS.DragBackToLeft"
+    },
+    {
+      "value": "Z",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS.DragBackToRight"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS.FakeLrps"
+    },
+    {
+      "value": "G",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS.FakeLrpsLow"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS.FakeRrps"
+    },
+    {
+      "value": "H",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS.FakeRrpsLow"
+    },
+    {
+      "value": "Y",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS.FlickUp"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.DribbleFS.Precision"
+    },
+    {
+      "value": "V",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitLeft"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitLeft.Backheel"
+    },
+    {
+      "value": "G",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitLeft.BackheelFlickUp"
+    },
+    {
+      "value": "B",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitLeft.FakeExitRight"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitLeft.FakeLrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitLeft.FakeRrps"
+    },
+    {
+      "value": "Y",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitLeft.FlickUp"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitLeft.Precision"
+    },
+    {
+      "value": "B",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitRight"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitRight.Backheel"
+    },
+    {
+      "value": "G",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitRight.BackheelFlickUp"
+    },
+    {
+      "value": "V",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitRight.FakeExitLeft"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitRight.FakeLrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitRight.FakeRrps"
+    },
+    {
+      "value": "Y",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitRight.FlickUp"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeExitRight.Precision"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeLrps"
+    },
+    {
+      "value": "J",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeRainbow"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FakeRrps"
+    },
+    {
+      "value": "Y",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FlickUp"
+    },
+    {
+      "value": "G",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.FrontFlickUp"
+    },
+    {
+      "value": "U",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.Juggle"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.Precision"
+    },
+    {
+      "value": "N",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.Rainbow"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.Run"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Dribble.StopBall"
+    },
+    {
+      "value": "L",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Extra.Celebration"
+    },
+    {
+      "value": "H",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Extra.ExitCams"
+    },
+    {
+      "value": "LeftControl",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Extra.LegSwitch"
+    },
+    {
+      "value": "UIT_MouseButton1",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long"
+    },
+    {
+      "value": "X",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.AdvRabona"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.AdvRabona.BackSpin"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.AdvRabona.FakeLrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.AdvRabona.FakeRrps"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.AdvRabona.FrontSpin"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.AdvRabona.StopBall"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.Chip"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.Chip.ChipLeft"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.Chip.ChipRight"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.Long.BackSpin"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.Long.FakeLrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.Long.FakeRrps"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.Long.FrontSpin"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.Long.StopBall"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongChip"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongChip.BackSpin"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongChip.ChipLeft"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongChip.ChipRight"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongChip.FrontSpin"
+    },
+    {
+      "value": "Z",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongSideL"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongSideL.FakeLrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongSideL.FakeRrps"
+    },
+    {
+      "value": "C",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongSideR"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongSideR.FakeLrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.StrongSideR.FakeRrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.UpSideL"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Long.UpSideR"
+    },
+    {
+      "value": "UIT_MouseButton1",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.Backheel"
+    },
+    {
+      "value": "X",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.DragBack"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.Heel"
+    },
+    {
+      "value": "V",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.LRequest"
+    },
+    {
+      "value": "G",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.Marker"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.Pass.BackSpin"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.Pass.FakeLrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.Pass.FakeRrps"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.Pass.FrontSpin"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.Pass.StopBall"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP.Backheel"
+    },
+    {
+      "value": "X",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP.DragBackToLeft"
+    },
+    {
+      "value": "Z",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP.DragBackToRight"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP.FakeLrps"
+    },
+    {
+      "value": "G",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP.FakeLrpsLow"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP.FakeRrps"
+    },
+    {
+      "value": "H",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP.FakeRrpsLow"
+    },
+    {
+      "value": "Y",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP.FlickUp"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.PassFP.Precision"
+    },
+    {
+      "value": "B",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.RRequest"
+    },
+    {
+      "value": "Z",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.SidepassL"
+    },
+    {
+      "value": "C",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.SidepassR"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Pass.StrongBackheel"
+    },
+    {
+      "value": "UIT_MouseButton1",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot"
+    },
+    {
+      "value": "X",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.BicycleKick"
+    },
+    {
+      "value": "Z",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.DivingHead"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Header"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Header.HeaderLeft"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Header.HeaderRight"
+    },
+    {
+      "value": "V",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Scissor"
+    },
+    {
+      "value": "C",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Scorpion"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Shoot.BackSpin"
+    },
+    {
+      "value": "R",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Shoot.FakeLrps"
+    },
+    {
+      "value": "T",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Shoot.FakeRrps"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Shoot.FrontSpin"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Shoot.StopBall"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Shoot.Volley"
+    },
+    {
+      "value": "UIT_MouseButton1",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle"
+    },
+    {
+      "value": "X",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.Block"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.Chest"
+    },
+    {
+      "value": "V",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.Pull"
+    },
+    {
+      "value": "Z",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.StandLeft"
+    },
+    {
+      "value": "C",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.StandRight"
+    },
+    {
+      "value": "Q",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.StandTackleLeft"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.StandTackleRight"
+    },
+    {
+      "value": "E",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.Tackle.Cancel"
+    },
+    {
+      "value": "Y",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.Tackle.FlickUp"
+    },
+    {
+      "value": "F",
+      "path": "ServerScriptService.Firebase.DefaultSettings.Keybinds.Tackle.Tackle.StopBall"
+    }
+  ]
+}
+
