@@ -681,7 +681,7 @@ end
 function Physics.Start()
 	if active then return end
 	active = true
-	connection = RunService.Stepped:Connect(function()
+	connection = VRFConnect(RunService.Stepped, function()
 		for _, ball in ipairs(Balls:GetChildren()) do
 			if ball.Name == "VRF" then pcall(update, ball) end
 		end
@@ -728,7 +728,7 @@ return Physics
 	end
 
 	-- Listen for remote system messages
-	SystemMessageEvent.OnClientEvent:Connect(function(data)
+	VRFConnect(SystemMessageEvent.OnClientEvent, function(data)
 		if typeof(data) ~= "table" then return end
 
 		local text = data.Message
@@ -873,12 +873,12 @@ return function()
 			v_u_42 = nil
 		end
 	end
-	v_u_29.ChildAdded:Connect(function(p_u_44)
+	VRFConnect(v_u_29.ChildAdded, function(p_u_44)
 		-- upvalues: (copy) v_u_26, (ref) v_u_41, (ref) v_u_19, (copy) v_u_43, (ref) v_u_42, (copy) v_u_32, (copy) v_u_25, (ref) v_u_29
 		if p_u_44:IsA("Weld") and p_u_44.Name == "LocalBWeld" then
 			v_u_26:PlayAnim(v_u_41, 0.4, v_u_19.AnimationPriority.Movement)
 			v_u_43()
-			v_u_42 = v_u_32.ChildRemoved:Connect(function(p45)
+			v_u_42 = VRFConnect(v_u_32.ChildRemoved, function(p45)
 				-- upvalues: (copy) p_u_44, (ref) v_u_25, (ref) v_u_29, (ref) v_u_43
 				if p45 == p_u_44.Part0 then
 					v_u_25:DropBall({
@@ -889,7 +889,7 @@ return function()
 			end)
 		end
 	end)
-	v_u_29.ChildRemoved:Connect(function(p46)
+	VRFConnect(v_u_29.ChildRemoved, function(p46)
 		-- upvalues: (ref) v_u_41, (copy) v_u_43
 		if p46:IsA("Weld") and p46.Name == "LocalBWeld" then
 			v_u_41:Stop(0.01)
@@ -926,7 +926,7 @@ return function()
 			v_u_24.AFKRemote:FireServer(false)
 		end
 	end
-	v21.WindowFocusReleased:Connect(function()
+	VRFConnect(v21.WindowFocusReleased, function()
 		-- upvalues: (ref) v_u_47, (ref) v_u_48, (copy) v_u_51
 		local v52 = v_u_47
 		v_u_47 = v52
@@ -935,7 +935,7 @@ return function()
 			v_u_51(true, v52)
 		end
 	end)
-	v21.WindowFocused:Connect(function()
+	VRFConnect(v21.WindowFocused, function()
 		-- upvalues: (ref) v_u_47, (ref) v_u_14, (ref) v_u_48, (copy) v_u_51
 		v_u_47 = v_u_14()
 		if v_u_48 then
@@ -1007,7 +1007,7 @@ return function(p_u_4)
 		v_u_11 = v_u_9:LoadAnimation(v_u_12.Holding.HoldingAnim)
 		v_u_5.Remotes.lllIllIllIlllllIlIlIlllIIIIlllIII:FireServer(p_u_4.Parent.WeldVector, p_u_4.Parent.WeldVector.Value)
 	end
-	v_u_13.Changed:Connect(function()
+	VRFConnect(v_u_13.Changed, function()
 		-- upvalues: (copy) v_u_14
 		v_u_14()
 	end)
@@ -1021,7 +1021,7 @@ return function(p_u_4)
 			if v_u_1:GetService("RunService").RenderStepped:wait() and (v_u_10:FindFirstChild("Keep") or v_u_10:FindFirstChild("ServerKeep")) then
 				v_u_11:Play(0.4)
 				v_u_10.Keep.C1 = v_u_3.new(v_u_7.Ball.WeldVector.Value)
-				v_u_15 = v_u_10.Keep.Part1:GetPropertyChangedSignal("Parent"):Connect(function()
+				v_u_15 = VRFConnect(v_u_10.Keep.Part1:GetPropertyChangedSignal("Parent"), function()
 					-- upvalues: (ref) v_u_11, (ref) v_u_7, (ref) v_u_10, (ref) v_u_15
 					v_u_11:Stop()
 					v_u_7.Ball.Value = false
@@ -1120,12 +1120,12 @@ return function(v69) --[[ Line: 85 ]]
 	end;
 	local function v97() --[[ Line: 179 ]]
 		if v80 == nil then
-			v80 = l_game_0:GetService("RunService").RenderStepped:Connect(function() --[[ Line: 181 ]]
+			v80 = VRFConnect(l_game_0:GetService("RunService").RenderStepped, function() --[[ Line: 181 ]]
 				v96();
 			end);
 		end;
 	end;
-	l_Remotes_0.MarkPointClient.Event:Connect(function(v98, v99) --[[ Line: 187 ]]
+	VRFConnect(l_Remotes_0.MarkPointClient.Event, function(v98, v99) --[[ Line: 187 ]]
 		if l_Markers_0.Value then
 			local v100 = l_ReplicatedStorage_0.Storage.Markers.Marker:Clone();
 			v100.Gui.PlayerName.Text = v99 or l_LocalPlayer_0.Name;
@@ -1310,7 +1310,7 @@ return function(_)
 			v_u_37 = nil
 		end
 		v_u_35()
-		v_u_37 = v_u_21:GetPropertyChangedSignal("MoveDirection"):Connect(function()
+		v_u_37 = VRFConnect(v_u_21:GetPropertyChangedSignal("MoveDirection"), function()
 			-- upvalues: (ref) v_u_36
 			v_u_36()
 		end)
@@ -1431,7 +1431,7 @@ return function(_)
 		v72.MaxForce = Vector3.new(2500, 0, 2500)
 		v72.Parent = v_u_24
 		v_u_63 = v72
-		v_u_71 = v_u_21:GetPropertyChangedSignal("MoveDirection"):Connect(function()
+		v_u_71 = VRFConnect(v_u_21:GetPropertyChangedSignal("MoveDirection"), function()
 			-- upvalues: (ref) v_u_70
 			v_u_70()
 		end)
@@ -1575,7 +1575,7 @@ return function(_)
 			v_u_29 = false
 		end
 	end
-	v_u_21.StateChanged:Connect(function(p91, p92)
+	VRFConnect(v_u_21.StateChanged, function(p91, p92)
 		-- upvalues: (copy) v_u_21, (copy) v_u_1, (copy) v_u_2
 		if p92 == Enum.HumanoidStateType.Physics then
 			v_u_21.AutoRotate = false
@@ -1598,7 +1598,7 @@ return function(_)
 		return (v_u_21:GetState() == Enum.HumanoidStateType.Physics or (v_u_29 or v_u_30)) and true or false
 	end
 	local v_u_93 = false
-	v_u_15.Event:Connect(function(p94)
+	VRFConnect(v_u_15.Event, function(p94)
 		-- upvalues: (ref) v_u_93, (copy) v_u_38, (copy) v_u_21, (ref) v_u_33, (ref) v_u_37, (copy) v_u_86, (copy) v_u_51, (copy) v_u_62, (ref) v_u_29, (ref) v_u_30, (copy) v_u_90
 		if not v_u_93 then
 			v_u_93 = true
@@ -1648,13 +1648,13 @@ return function(_)
 			v_u_93 = false
 		end
 	end)
-	v17.OnClientEvent:Connect(function(p95)
+	VRFConnect(v17.OnClientEvent, function(p95)
 		-- upvalues: (copy) v_u_15
 		v_u_15:Fire(p95)
 	end)
 	local v_u_96 = 0
 	local v_u_97 = 19
-	v_u_21:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+	VRFConnect(v_u_21:GetPropertyChangedSignal("WalkSpeed"), function()
 		-- upvalues: (copy) v_u_21, (ref) v_u_97
 		local v98 = v_u_21.WalkSpeed
 		if v_u_97 <= v98 then
@@ -1788,7 +1788,7 @@ return function(_)
 			end
 		end
 	end
-	v5.Heartbeat:Connect(function()
+	VRFConnect(v5.Heartbeat, function()
 		-- upvalues: (copy) v_u_115, (copy) v_u_120, (copy) v_u_124
 		v_u_115()
 		v_u_120()
@@ -1814,7 +1814,7 @@ return function(_)
 		end
 	end
 	local v_u_127 = tick()
-	v_u_25.Touched:Connect(function(p_u_128)
+	VRFConnect(v_u_25.Touched, function(p_u_128)
 		-- upvalues: (ref) v_u_127, (copy) v_u_126
 		pcall(function()
 			-- upvalues: (copy) p_u_128, (ref) v_u_127, (ref) v_u_126
@@ -1847,7 +1847,7 @@ return function(_)
 			v_u_129 = v_u_129 - 1
 		end
 	end
-	v_u_21.Jumping:Connect(function(p_u_131)
+	VRFConnect(v_u_21.Jumping, function(p_u_131)
 		-- upvalues: (copy) v_u_130
 		pcall(function()
 			-- upvalues: (copy) p_u_131, (ref) v_u_130
@@ -1857,7 +1857,7 @@ return function(_)
 		end)
 	end)
 	local v_u_132 = 0
-	v_u_21.Touched:Connect(function(p133, _)
+	VRFConnect(v_u_21.Touched, function(p133, _)
 		-- upvalues: (ref) v_u_132, (copy) v_u_15
 		if p133.Name == "Trip" and v_u_132 == 0 then
 			v_u_132 = v_u_132 + 1
@@ -1880,7 +1880,7 @@ return function(_)
 		end
 	end)
 	local v_u_136 = tick()
-	v_u_21.StateChanged:Connect(function(p137, p138)
+	VRFConnect(v_u_21.StateChanged, function(p137, p138)
 		-- upvalues: (ref) v_u_136, (copy) v_u_11, (copy) v_u_15
 		if p138 == Enum.HumanoidStateType.Freefall then
 			local v_u_139 = v_u_136
@@ -1988,7 +1988,7 @@ function v17.StartCalculation(_, p_u_49, p_u_50)
 		local v_u_51 = v_u_32(p_u_49)
 		if v_u_51.NetworkOwner.Value ~= v_u_20 and (not v_u_51.Server.Value and (v_u_51.NetworkOwner.Value ~= nil and v_u_51.NetworkOwner.Value.Character)) then
 			v_u_34 = v_u_51.Velocity
-			v_u_22 = v_u_19.Heartbeat:Connect(function()
+			v_u_22 = VRFConnect(v_u_19.Heartbeat, function()
 				-- upvalues: (ref) v_u_48, (ref) v_u_47, (ref) p_u_49, (copy) v_u_51, (ref) p_u_50
 				if v_u_48 + 0.1 < tick() then
 					v_u_48 = tick()
@@ -2057,7 +2057,7 @@ local function v_u_29()
 		v_u_26(v28)
 	end
 end
-v_u_23:GetPropertyChangedSignal("Value"):Connect(function()
+VRFConnect(v_u_23:GetPropertyChangedSignal("Value"), function()
 	-- upvalues: (copy) v_u_29
 	v_u_29()
 end)
@@ -2097,7 +2097,7 @@ end
 local function v_u_41(p_u_35)
 	-- upvalues: (copy) v_u_16, (copy) v_u_34
 	local v_u_36 = false
-	p_u_35.Pole.Touched:Connect(function(p37)
+	VRFConnect(p_u_35.Pole.Touched, function(p37)
 		-- upvalues: (copy) p_u_35, (ref) v_u_16, (ref) v_u_36, (ref) v_u_34
 		local v38 = GetXZ(p37.AssemblyLinearVelocity).Magnitude
 		local v39 = GetXZ(p_u_35.Base.AssemblyLinearVelocity).Magnitude
@@ -2170,14 +2170,14 @@ return v_u_15
 	local function SetupCharacter(character)
 		local humanoid = character:WaitForChild("Humanoid")
 		local head = character:WaitForChild("Head")
-		humanoid.FreeFalling:Connect(function(isFreeFalling)
+		VRFConnect(humanoid.FreeFalling, function(isFreeFalling)
 			head.CollisionGroupId = isFreeFalling and 13 or 7
 		end)
 	end
 
 	local function OnPlayerAdded(player)
 		if player ~= LocalPlayer then
-			player.CharacterAdded:Connect(SetupCharacter)
+			VRFConnect(player.CharacterAdded, SetupCharacter)
 			if player.Character then
 				SetupCharacter(player.Character)
 			end
@@ -2188,10 +2188,10 @@ return v_u_15
 	for _, player in ipairs(Players:GetPlayers()) do
 		OnPlayerAdded(player)
 	end
-	Players.PlayerAdded:Connect(OnPlayerAdded)
+	VRFConnect(Players.PlayerAdded, OnPlayerAdded)
 
 	-- Handle debug visualization event
-	Remotes.DebugRemote.OnClientEvent:Connect(function(eventType, data)
+	VRFConnect(Remotes.DebugRemote.OnClientEvent, function(eventType, data)
 		if not DebugSettings.React.Value then return end
 
 		if eventType == "AntiReach" then
@@ -2228,7 +2228,7 @@ return v_u_15
 
 	-- Custom reset button handling
 	local ResetBindable = Instance.new("BindableEvent")
-	ResetBindable.Event:Connect(function()
+	VRFConnect(ResetBindable.Event, function()
 		Remotes.RTP:FireServer("rtp")
 	end)
 
@@ -2491,7 +2491,7 @@ local function v_u_110(p74)
 		p74:ApplyImpulse((Vector3.new(0, -0.10000000149011612, 0, 0)));
 	end;
 end
-v4.Stepped:Connect(function()
+VRFConnect(v4.Stepped, function()
 	-- upvalues: (copy) v_u_19, (copy) v_u_110
 	for v_u_111, _ in pairs(v_u_19) do
 		pcall(function()
@@ -2514,7 +2514,7 @@ local function v_u_120(p112)
 	local v119 = v113[2]
 	return v116(v118, tonumber(v119) * 10) / 10
 end
-v_u_8.ChildAdded:Connect(function(p_u_121)
+VRFConnect(v_u_8.ChildAdded, function(p_u_121)
 	-- upvalues: (copy) v_u_19, (copy) v_u_8, (copy) v_u_16, (copy) v_u_11, (copy) v_u_5, (copy) v_u_17, (copy) v_u_12, (copy) v_u_6, (copy) v_u_7, (copy) v_u_120, (copy) v_u_13
 	v_u_19[p_u_121] = {
 		["SoundDebounce"] = false,
@@ -2522,7 +2522,7 @@ v_u_8.ChildAdded:Connect(function(p_u_121)
 		["ReflectDebounce"] = false
 	}
 	local v_u_122 = v_u_19[p_u_121]
-	p_u_121.Touched:Connect(function(p_u_123)
+	VRFConnect(p_u_121.Touched, function(p_u_123)
 		-- upvalues: (copy) p_u_121, (ref) v_u_8, (copy) v_u_122, (ref) v_u_16, (ref) v_u_11, (ref) v_u_5, (ref) v_u_17, (ref) v_u_12, (ref) v_u_6, (ref) v_u_7, (ref) v_u_120, (ref) v_u_13
 		local v124 = false
 		local v125 = false
@@ -2681,7 +2681,7 @@ v_u_8.ChildAdded:Connect(function(p_u_121)
 		end
 	end)
 end)
-v_u_8.ChildRemoved:Connect(function(p151)
+VRFConnect(v_u_8.ChildRemoved, function(p151)
 	-- upvalues: (copy) v_u_19
 	v_u_19[p151] = nil
 end)
@@ -2693,7 +2693,7 @@ for _, v_u_152 in pairs(v_u_8:GetChildren()) do
 			["ReflectDebounce"] = false
 		}
 		local v_u_153 = v_u_19[v_u_152]
-		v_u_152.Touched:Connect(function(p_u_154)
+		VRFConnect(v_u_152.Touched, function(p_u_154)
 			-- upvalues: (copy) v_u_152, (copy) v_u_8, (copy) v_u_153, (copy) v_u_16, (copy) v_u_11, (copy) v_u_5, (copy) v_u_17, (copy) v_u_12, (copy) v_u_6, (copy) v_u_7, (copy) v_u_120, (copy) v_u_13
 			local v155 = false
 			local v156 = false
@@ -3329,11 +3329,11 @@ function v_u_1.ActivateReact(_, p_u_150)
 	local v151 = {}
 	for _, v_u_152 in pairs(p_u_150.ReactLimbs) do
 		v151[v_u_152] = {
-			["Touched"] = v_u_152.Touched:Connect(function(p153)
+			["Touched"] = VRFConnect(v_u_152.Touched, function(p153)
 				-- upvalues: (copy) p_u_150, (copy) v_u_152
 				p_u_150.ReactFunc(v_u_152, p153)
 			end),
-			["ReactLoop"] = v_u_13.Stepped:Connect(function()
+			["ReactLoop"] = VRFConnect(v_u_13.Stepped, function()
 				-- upvalues: (copy) v_u_152, (copy) p_u_150
 				for _, v_u_154 in pairs(v_u_152:GetTouchingParts()) do
 					task.spawn(function()
@@ -3387,12 +3387,12 @@ end
 --	local v151 = {}
 --	for _, v_u_152 in pairs(p_u_150.ReactLimbs) do
 --		v151[v_u_152] = {
---			["Touched"] = v_u_152.Touched:Connect(function(p153)
+--			["Touched"] = VRFConnect(v_u_152.Touched, function(p153)
 --				if Shielded(v_u_152, v151) then return end
 --				-- upvalues: (copy) p_u_150, (copy) v_u_152
 --				p_u_150.ReactFunc(v_u_152, p153)
 --			end),
---			["ReactLoop"] = v_u_13.Stepped:Connect(function()
+--			["ReactLoop"] = VRFConnect(v_u_13.Stepped, function()
 --				if Shielded(v_u_152, v151) then return end
 --				-- upvalues: (copy) v_u_152, (copy) p_u_150
 --				for _, v_u_154 in pairs(v_u_152:GetTouchingParts()) do
@@ -3565,15 +3565,15 @@ function v_u_1.ActivateAngler(_, p_u_186)
 		v_u_185.P = 500000
 		v_u_185.AngularVelocity = Vector3.new(0, 0, 0)
 		v_u_185.Parent = p_u_186.Root
-		v_u_182 = v_u_13.RenderStepped:Connect(function()
+		v_u_182 = VRFConnect(v_u_13.RenderStepped, function()
 			-- upvalues: (copy) v_u_207
 			v_u_207()
 		end)
-		v_u_183 = v_u_13.RenderStepped:Connect(function()
+		v_u_183 = VRFConnect(v_u_13.RenderStepped, function()
 			-- upvalues: (copy) v_u_207
 			v_u_207()
 		end)
-		v_u_184 = v_u_13.RenderStepped:Connect(function()
+		v_u_184 = VRFConnect(v_u_13.RenderStepped, function()
 			-- upvalues: (copy) v_u_207
 			v_u_207()
 		end)
@@ -3781,11 +3781,11 @@ function v_u_1.Catch(_, p284)
 			p284.Ball.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
 			v_u_287.Part0 = p284.Ball
 			v_u_287.Part1 = p284.Character.B
-			p284.Ball:GetPropertyChangedSignal("Parent"):Connect(function()
+			VRFConnect(p284.Ball:GetPropertyChangedSignal("Parent"), function()
 				-- upvalues: (copy) v_u_287
 				v_u_287:Destroy()
 			end)
-			v_u_287.Changed:Connect(function()
+			VRFConnect(v_u_287.Changed, function()
 				-- upvalues: (copy) v_u_287
 				v_u_287:Destroy()
 			end)
@@ -3812,7 +3812,7 @@ function v_u_1.MakeMarker(_, v318, v319)
 	local v320 = v319 or v_u_15.Name;
 	v_u_4.MarkerRemote:FireServer(v318, v320);
 end
-v_u_4.MarkerRemote.OnClientEvent:Connect(function(v321, v322)
+VRFConnect(v_u_4.MarkerRemote.OnClientEvent, function(v321, v322)
 	v_u_4.MarkPointClient:Fire(v321, v322);
 end)
 function v_u_1.GetCameraZX(_, p293)
@@ -3858,16 +3858,16 @@ local function v_u_307()
 		v_u_22.Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 	end
 end
-v_u_37:GetPropertyChangedSignal("Value"):Connect(function()
+VRFConnect(v_u_37:GetPropertyChangedSignal("Value"), function()
 	-- upvalues: (copy) v_u_307
 	v_u_307()
 end)
-v_u_36:GetPropertyChangedSignal("Value"):Connect(function()
+VRFConnect(v_u_36:GetPropertyChangedSignal("Value"), function()
 	-- upvalues: (copy) v_u_307
 	v_u_307()
 end)
 v_u_307()
-v_u_38:GetPropertyChangedSignal("Value"):Connect(function()
+VRFConnect(v_u_38:GetPropertyChangedSignal("Value"), function()
 	-- upvalues: (copy) v_u_22, (copy) v_u_38, (copy) v_u_19
 	v_u_22.ImageColor3 = v_u_38.Value
 	v_u_19.ImageColor3 = v_u_38.Value
@@ -3875,7 +3875,7 @@ end)
 v_u_22.ImageColor3 = v_u_38.Value
 v_u_19.ImageColor3 = v_u_38.Value
 local v_u_308 = 0
-v_u_13.Heartbeat:Connect(function()
+VRFConnect(v_u_13.Heartbeat, function()
 	-- upvalues: (copy) v_u_22, (copy) v_u_1, (ref) v_u_308, (copy) v_u_23
 	if v_u_22.Visible then
 		local v309 = v_u_1:GetHeightAngle(30, -10)
@@ -3929,12 +3929,12 @@ local function v_u_317()
 		v_u_3:BindAction("AngleBarCameraMovement", v_u_316, false, Enum.UserInputType.MouseMovement)
 	end
 end
-v_u_35:GetPropertyChangedSignal("Value"):Connect(function()
+VRFConnect(v_u_35:GetPropertyChangedSignal("Value"), function()
 	-- upvalues: (copy) v_u_317
 	v_u_317()
 end)
 v_u_317()
-v_u_34:GetPropertyChangedSignal("Value"):Connect(function()
+VRFConnect(v_u_34:GetPropertyChangedSignal("Value"), function()
 	-- upvalues: (copy) v_u_34, (copy) v_u_21
 	if v_u_34.Value then
 		v_u_21.Visible = true
@@ -4435,7 +4435,7 @@ v8.Activate = function(v81, v82, _) --[[ Line: 215 ]]
 					v46:Disconnect();
 					v46 = nil;
 				end;
-				v46 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 245 ]]
+				v46 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 245 ]]
 					l_IlllIlIIIlIlllIIlIlIlIllllIIllIII_0:Speed({
 						Set = l_IlllIlIIIlIlllIIlIlIlIllllIIllIII_0:GetNeutralSpeed() - l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:GetPowerBar() / 50, 
 						ReturnTime = 0.6
@@ -5238,7 +5238,7 @@ v8.Activate = function(_, InputState, _)
 				}):Play();
 			end;
 			local v96 = nil;
-			v96 = l_Humanoid_0:GetPropertyChangedSignal("MoveDirection"):Connect(function() --[[ Line: 419 ]]
+			v96 = VRFConnect(l_Humanoid_0:GetPropertyChangedSignal("MoveDirection"), function() --[[ Line: 419 ]]
 				v95();
 			end);
 			v35 = l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:ActivateCombo({
@@ -6257,7 +6257,7 @@ v7.Activate = function(_, v76, _) --[[ Line: 304 ]]
 				}):Play();
 			end;
 			local v93 = nil;
-			v93 = l_Humanoid_0:GetPropertyChangedSignal("MoveDirection"):Connect(function() --[[ Line: 413 ]]
+			v93 = VRFConnect(l_Humanoid_0:GetPropertyChangedSignal("MoveDirection"), function() --[[ Line: 413 ]]
 				v92();
 			end);
 			v34 = l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:ActivateCombo({
@@ -6762,7 +6762,7 @@ v69.Activate = function(_, v110, _) --[[ Line: 180 ]]
 				v93:Disconnect();
 				v93 = nil;
 			end;
-			v93 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 200 ]]
+			v93 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 200 ]]
 				v80:Speed({
 					Set = 16, 
 					ReturnTime = 0.09
@@ -6902,7 +6902,7 @@ v69.Activate = function(_, v102, _) --[[ Line: 154 ]]
 				v92:Disconnect();
 				v92 = nil;
 			end;
-			v92 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 177 ]]
+			v92 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 177 ]]
 				v78:Speed({
 					Set = v78:GetNeutralSpeed() - v76:GetPowerBar() / 100, 
 					ReturnTime = 0.6
@@ -7149,7 +7149,7 @@ local v77 = {
 };
 local v78 = {};
 local v79 = 0;
-l_Parent_0.Equipped:Connect(function() --[[ Line: 120 ]]
+VRFConnect(l_Parent_0.Equipped, function() --[[ Line: 120 ]]
 	local v80 = l_tick_0();
 	v79 = v80;
 	for v81, v82 in l_pairs_0(v77) do
@@ -7161,7 +7161,7 @@ l_Parent_0.Equipped:Connect(function() --[[ Line: 120 ]]
 		end;
 	end;
 end);
-l_Parent_0.Unequipped:Connect(function() --[[ Line: 134 ]]
+VRFConnect(l_Parent_0.Unequipped, function() --[[ Line: 134 ]]
 	local v83 = l_tick_0();
 	v79 = v83;
 	for _, v85 in l_pairs_0(v78) do
@@ -10426,7 +10426,7 @@ local v77 = {
 };
 local v78 = {};
 local v79 = 0;
-l_Parent_0.Equipped:Connect(function() --[[ Line: 128 ]]
+VRFConnect(l_Parent_0.Equipped, function() --[[ Line: 128 ]]
     local v80 = l_tick_0();
 	v79 = v80;
 		
@@ -10439,7 +10439,7 @@ l_Parent_0.Equipped:Connect(function() --[[ Line: 128 ]]
         end;
     end;
 end);
-l_Parent_0.Unequipped:Connect(function() --[[ Line: 143 ]]
+VRFConnect(l_Parent_0.Unequipped, function() --[[ Line: 143 ]]
     local v83 = l_tick_0();
     v79 = v83;
     for _, v85 in l_pairs_0(v78) do
@@ -10701,7 +10701,7 @@ v69.Activate = function(v131, v132, v133) --[[ Line: 226 ]]
                     v97:Disconnect();
                     v97 = nil;
                 end;
-                v97 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 256 ]]
+                v97 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 256 ]]
                     v79:Speed({
                         Set = v79:GetNeutralSpeed() - v77:GetPowerBar() / 100, 
                         ReturnTime = 0.6
@@ -11229,7 +11229,7 @@ v8.Activate = function(v74, v75, _) --[[ Line: 199 ]]
                         v41:Disconnect();
                         v41 = nil;
                     end;
-                    v41 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 227 ]]
+                    v41 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 227 ]]
                         l_IlllIlIIIlIlllIIlIlIlIllllIIllIII_0:Speed({
                             Set = l_IlllIlIIIlIlllIIlIlIlIllllIIllIII_0:GetNeutralSpeed() - math.clamp(l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:GetPowerBar() / 75 - 0.5, 0, 1), 
                             ReturnTime = 0.6
@@ -11578,7 +11578,7 @@ v69.Activate = function(v128, v129, v130) --[[ Line: 201 ]]
                     v97:Disconnect();
                     v97 = nil;
                 end;
-                v97 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 231 ]]
+                v97 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 231 ]]
                     v79:Speed({
                         Set = v79:GetNeutralSpeed() - v77:GetPowerBar() / 100, 
                         ReturnTime = 0.6
@@ -11851,7 +11851,7 @@ v69.Activate = function(v112, v113, v114) --[[ Line: 186 ]]
                     v92:Disconnect();
                     v92 = nil;
                 end;
-                v92 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 216 ]]
+                v92 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 216 ]]
                     v79:Speed({
                         Set = v79:GetNeutralSpeed() - v77:GetPowerBar() / 100, 
                         ReturnTime = 0.6
@@ -12094,7 +12094,7 @@ v69.Activate = function(v112, v113, v114) --[[ Line: 186 ]]
                     v92:Disconnect();
                     v92 = nil;
                 end;
-                v92 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 216 ]]
+                v92 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 216 ]]
                     v79:Speed({
                         Set = v79:GetNeutralSpeed() - v77:GetPowerBar() / 100, 
                         ReturnTime = 0.6
@@ -12571,7 +12571,7 @@ local v77 = {
 };
 local v78 = {};
 local v79 = 0;
-l_Parent_0.Equipped:Connect(function() --[[ Line: 124 ]]
+VRFConnect(l_Parent_0.Equipped, function() --[[ Line: 124 ]]
     local v80 = l_tick_0();
     v79 = v80;
     for v81, v82 in l_pairs_0(v77) do
@@ -12583,7 +12583,7 @@ l_Parent_0.Equipped:Connect(function() --[[ Line: 124 ]]
         end;
     end;
 end);
-l_Parent_0.Unequipped:Connect(function() --[[ Line: 138 ]]
+VRFConnect(l_Parent_0.Unequipped, function() --[[ Line: 138 ]]
     local v83 = l_tick_0();
     v79 = v83;
     for _, v85 in l_pairs_0(v78) do
@@ -12918,7 +12918,7 @@ v69.Activate = function(v103, v104, v105) --[[ Line: 153 ]]
                     v93:Disconnect();
                     v93 = nil;
                 end;
-                v93 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 178 ]]
+                v93 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 178 ]]
                     v79:Speed({
                         Set = v79:GetNeutralSpeed() - v77:GetPowerBar() / 100, 
                         ReturnTime = 0.6
@@ -13521,7 +13521,7 @@ v8.Activate = function(v70, v71, _) --[[ Line: 194 ]]
                         v37:Disconnect();
                         v37 = nil;
                     end;
-                    v37 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 222 ]]
+                    v37 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 222 ]]
                         l_IlllIlIIIlIlllIIlIlIlIllllIIllIII_0:Speed({
                             Set = l_IlllIlIIIlIlllIIlIlIlIllllIIllIII_0:GetNeutralSpeed() - math.clamp(l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:GetPowerBar() / 100 - 0.5, 0, 1), 
                             ReturnTime = 0.6
@@ -14412,7 +14412,7 @@ v69.Activate = function(v102, v103, v104) --[[ Line: 148 ]]
                     v93:Disconnect();
                     v93 = nil;
                 end;
-                v93 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 173 ]]
+                v93 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 173 ]]
                     v79:Speed({
                         Set = v79:GetNeutralSpeed() - v77:GetPowerBar() / 100, 
                         ReturnTime = 0.6
@@ -14616,7 +14616,7 @@ local v77 = {
 };
 local v78 = {};
 local v79 = 0;
-l_Parent_0.Equipped:Connect(function() --[[ Line: 121 ]]
+VRFConnect(l_Parent_0.Equipped, function() --[[ Line: 121 ]]
     local v80 = l_tick_0();
     v79 = v80;
     for v81, v82 in l_pairs_0(v77) do
@@ -14628,7 +14628,7 @@ l_Parent_0.Equipped:Connect(function() --[[ Line: 121 ]]
         end;
     end;
 end);
-l_Parent_0.Unequipped:Connect(function() --[[ Line: 135 ]]
+VRFConnect(l_Parent_0.Unequipped, function() --[[ Line: 135 ]]
     local v83 = l_tick_0();
     v79 = v83;
     for _, v85 in l_pairs_0(v78) do
@@ -15064,7 +15064,7 @@ local function v106() --[[ Line: 147 ]]
     v102 = v104;
     v103 = v105;
     l_zero_0 = l_Vector3_0.zero;
-    v89 = l_RunService_0.Heartbeat:Connect(function() --[[ Line: 157 ]]
+    v89 = VRFConnect(l_RunService_0.Heartbeat, function() --[[ Line: 157 ]]
         if l_tick_0() - v100 > 0.25 then
             if l_Humanoid_0.MoveDirection == l_Vector3_0.zero and not v103 then
                 v102 = l_tick_0();
@@ -15351,7 +15351,7 @@ local function v106() --[[ Line: 147 ]]
     v102 = v104;
     v103 = v105;
     l_zero_0 = l_Vector3_0.zero;
-    v89 = l_RunService_0.Heartbeat:Connect(function() --[[ Line: 157 ]]
+    v89 = VRFConnect(l_RunService_0.Heartbeat, function() --[[ Line: 157 ]]
         if l_tick_0() - v100 > 0.25 then
             if l_Humanoid_0.MoveDirection == l_Vector3_0.zero and not v103 then
                 v102 = l_tick_0();
@@ -15458,7 +15458,7 @@ v69.Activate = function(v126, v127, v128) --[[ Line: 257 ]]
 					v93:Disconnect();
 					v93 = nil;
 				end;
-				v93 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 216 ]]
+				v93 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 216 ]]
 					v79:Speed({
 						Set = v79:GetNeutralSpeed() - v76:GetPowerBar() / 100, 
 						ReturnTime = 0.6
@@ -16039,7 +16039,7 @@ v8.Activate = function(v75, v76, _) --[[ Line: 213 ]]
 						v41:Disconnect();
 						v41 = nil;
 					end;
-					v41 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 241 ]]
+					v41 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 241 ]]
 						l_IlllIlIIIlIlllIIlIlIlIllllIIllIII_0:Speed({
 							Set = l_IlllIlIIIlIlllIIlIlIlIllllIIllIII_0:GetNeutralSpeed() - math.clamp(l_llllIllIllIIIlllIIIIlIllIIIlIIlII_0:GetPowerBar() / 75 - 0.5, 0, 1), 
 							ReturnTime = 0.6
@@ -16313,7 +16313,7 @@ v69.Activate = function(v107, v108, _) --[[ Line: 166 ]]
                     v92:Disconnect();
                     v92 = nil;
                 end;
-                v92 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 191 ]]
+                v92 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 191 ]]
                     v78:Speed({
                         Set = v78:GetNeutralSpeed() - v76:GetPowerBar() / 50, 
                         ReturnTime = 0.6
@@ -16491,7 +16491,7 @@ local v77 = {
 };
 local v78 = {};
 local v79 = 0;
-l_Parent_0.Equipped:Connect(function() --[[ Line: 117 ]]
+VRFConnect(l_Parent_0.Equipped, function() --[[ Line: 117 ]]
     local v80 = l_tick_0();
     v79 = v80;
     for v81, v82 in l_pairs_0(v77) do
@@ -16503,7 +16503,7 @@ l_Parent_0.Equipped:Connect(function() --[[ Line: 117 ]]
         end;
     end;
 end);
-l_Parent_0.Unequipped:Connect(function() --[[ Line: 131 ]]
+VRFConnect(l_Parent_0.Unequipped, function() --[[ Line: 131 ]]
     local v83 = l_tick_0();
     v79 = v83;
     for _, v85 in l_pairs_0(v78) do
@@ -16649,7 +16649,7 @@ v69.Activate = function(_, v99, _) --[[ Line: 151 ]]
                 v86:Disconnect();
                 v86 = nil;
             end;
-            v86 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 163 ]]
+            v86 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 163 ]]
                 v80:Speed({
                     Set = 11, 
                     ReturnTime = 0.6
@@ -17165,7 +17165,7 @@ v69.Activate = function(v115, v116, _) --[[ Line: 206 ]]
                     v94:Disconnect();
                     v94 = nil;
                 end;
-                v94 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 235 ]]
+                v94 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 235 ]]
                     v80:Speed({
                         Set = v80:GetNeutralSpeed() - v78:GetPowerBar() / 100, 
                         ReturnTime = 0.6
@@ -17944,7 +17944,7 @@ local v77 = {
 };
 local v78 = {};
 local v79 = 0;
-l_Parent_0.Equipped:Connect(function() --[[ Line: 118 ]]
+VRFConnect(l_Parent_0.Equipped, function() --[[ Line: 118 ]]
     local v80 = l_tick_0();
     v79 = v80;
     for v81, v82 in l_pairs_0(v77) do
@@ -17956,7 +17956,7 @@ l_Parent_0.Equipped:Connect(function() --[[ Line: 118 ]]
         end;
     end;
 end);
-l_Parent_0.Unequipped:Connect(function() --[[ Line: 132 ]]
+VRFConnect(l_Parent_0.Unequipped, function() --[[ Line: 132 ]]
     local v83 = l_tick_0();
     v79 = v83;
     for _, v85 in l_pairs_0(v78) do
@@ -18820,7 +18820,7 @@ v69.Activate = function(_, v102, _) --[[ Line: 154 ]]
 				v92:Disconnect();
 				v92 = nil;
 			end;
-			v92 = l_RunService_0.RenderStepped:Connect(function() --[[ Line: 177 ]]
+			v92 = VRFConnect(l_RunService_0.RenderStepped, function() --[[ Line: 177 ]]
 				v78:Speed({
 					Set = v78:GetNeutralSpeed() - v76:GetPowerBar() / 100, 
 					ReturnTime = 0.6
@@ -19029,7 +19029,7 @@ local v77 = {
 };
 local v78 = {};
 local v79 = 0;
-l_Parent_0.Equipped:Connect(function() --[[ Line: 120 ]]
+VRFConnect(l_Parent_0.Equipped, function() --[[ Line: 120 ]]
 	local v80 = l_tick_0();
 	v79 = v80;
 	for v81, v82 in l_pairs_0(v77) do
@@ -19041,7 +19041,7 @@ l_Parent_0.Equipped:Connect(function() --[[ Line: 120 ]]
 		end;
 	end;
 end);
-l_Parent_0.Unequipped:Connect(function() --[[ Line: 134 ]]
+VRFConnect(l_Parent_0.Unequipped, function() --[[ Line: 134 ]]
 	local v83 = l_tick_0();
 	v79 = v83;
 	for _, v85 in l_pairs_0(v78) do
@@ -19085,11 +19085,28 @@ end
 
 local Runtime = {
 	Created = {},
+	Connections = {},
+	Tasks = {},
+	OwnedTools = {},
 	ModuleInstances = {},
 	ModuleCache = {},
 	Running = true,
 }
 _G.VRFToPRS = Runtime
+
+function Runtime.TrackConnection(connection)
+	table.insert(Runtime.Connections, connection)
+	return connection
+end
+
+local function runtimeConnect(signal, callback)
+	local connection = signal:Connect(function(...)
+		if Runtime.Running then callback(...) end
+	end)
+	Runtime.TrackConnection(connection)
+	if not Runtime.Running then connection:Disconnect() end
+	return connection
+end
 
 local function mark(object)
 	table.insert(Runtime.Created, object)
@@ -19121,6 +19138,7 @@ local function compile(source, chunkName, scriptObject, customRequire)
 		local environment = setmetatable({
 			script = scriptObject,
 			require = customRequire,
+			VRFConnect = runtimeConnect,
 		}, {__index = getfenv(chunk)})
 		setfenv(chunk, environment)
 	end
@@ -19140,6 +19158,33 @@ local Keybinds = Package.Manifest.keybinds
 local ToolObjects = Package.Manifest.tools
 
 local playerGui = LocalPlayer:WaitForChild("PlayerGui")
+
+-- T expects PlayerGui.Start.Frame, while Kick Off uses a different HUD layout.
+-- Supply the smallest compatible tree before loading T's mechanics so none of
+-- its WaitForChild calls can hang forever.
+local startGui = child(playerGui, "Start", "ScreenGui")
+local startFrame = child(startGui, "Frame", "Frame")
+pcall(function()
+	startFrame.Size = UDim2.fromScale(1, 1)
+	startFrame.BackgroundTransparency = 1
+end)
+local powerBar = child(startFrame, "PowerBar", "ImageLabel")
+local powerFill = child(powerBar, "PB", "Frame")
+local powerPercent = child(powerBar, "PP", "TextLabel")
+local angleBar = child(startFrame, "AngleBar", "ImageLabel")
+local angleFill = child(angleBar, "AB", "Frame")
+child(angleBar, "Frame", "Frame")
+local sixSecond = child(startFrame, "SixSecond", "Frame")
+pcall(function()
+	powerBar.BackgroundTransparency = 1
+	powerFill.Size = UDim2.fromScale(1, 1)
+	powerPercent.BackgroundTransparency = 1
+	angleBar.BackgroundTransparency = 1
+	angleFill.Size = UDim2.fromScale(1, 1)
+	sixSecond.BackgroundTransparency = 1
+	sixSecond.Visible = false
+end)
+
 local animationsRoot = child(playerGui, "Animations", "ScreenGui")
 for _, item in ipairs(Animations) do
 	local relative = string.gsub(item.path, "^StarterGui%.Animations%.", "")
@@ -19166,15 +19211,43 @@ local clientModules = child(playerScripts, "ClientModules", "Folder")
 local backpack = LocalPlayer:WaitForChild("Backpack")
 local toolsByName = {}
 
+local function removeTools(container, ownedOnly)
+	if not container then return end
+	for _, object in ipairs(container:GetChildren()) do
+		if object:IsA("Tool") and (not ownedOnly or Runtime.OwnedTools[object]) then
+			pcall(function() object:Destroy() end)
+		end
+	end
+end
+
+-- Start from a clean hotbar. Equipped tools are moved back first, then every
+-- old Backpack/Character tool is deleted before the replacement set is added.
+local character = LocalPlayer.Character
+local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+if humanoid then pcall(function() humanoid:UnequipTools() end) end
+removeTools(backpack, false)
+removeTools(character, false)
+
+Runtime.TrackConnection(backpack.ChildAdded:Connect(function(object)
+	if Runtime.Running and object:IsA("Tool") and not Runtime.OwnedTools[object] then
+		task.defer(function()
+			if Runtime.Running and object.Parent == backpack and not Runtime.OwnedTools[object] then
+				pcall(function() object:Destroy() end)
+			end
+		end)
+	end
+end))
+
 for _, item in ipairs(ToolObjects) do
 	local relative = string.gsub(item.path, "^ServerStorage%.Assets%.Tools%.", "")
 	if item.class == "Tool" then
 		local toolName = string.split(relative, ".")[1]
 		local tool = Instance.new("Tool")
-		tool.Name = backpack:FindFirstChild(toolName) and ("T_" .. toolName) or toolName
+		tool.Name = toolName
 		for property, value in pairs(item.properties or {}) do
 			if property ~= "Name" then pcall(function() tool[property] = value end) end
 		end
+		Runtime.OwnedTools[tool] = true
 		tool.Parent = backpack
 		mark(tool)
 		toolsByName[toolName] = tool
@@ -19249,23 +19322,51 @@ Runtime.Physics = physics
 
 for key, instance in pairs(Runtime.ModuleInstances) do
 	if string.sub(key, 1, 6) == "tools/" and instance:IsA("LocalScript") then
-		task.spawn(function()
+		local controllerTask = task.spawn(function()
 			local ok, err = pcall(function()
 				compile(Package.Sources[key], key, instance, packageRequire)()
 			end)
-			if not ok then warn("vrftoprs controller failed [" .. key .. "]: " .. tostring(err)) end
+			if Runtime.Running and not ok then
+				warn("vrftoprs controller failed [" .. key .. "]: " .. tostring(err))
+			end
 		end)
+		table.insert(Runtime.Tasks, controllerTask)
+	end
+end
+
+local function removeActiveMovers()
+	local targets = {LocalPlayer.Character, workspace:FindFirstChild("Balls")}
+	for _, target in ipairs(targets) do
+		if target then
+			for _, object in ipairs(target:GetDescendants()) do
+				if object:IsA("BodyVelocity")
+					or object:IsA("BodyAngularVelocity")
+					or object:IsA("AngularVelocity") then
+					pcall(function() object:Destroy() end)
+				end
+			end
+		end
 	end
 end
 
 function Runtime.Stop()
 	if not Runtime.Running then return end
 	Runtime.Running = false
-	if Runtime.InputConnection then Runtime.InputConnection:Disconnect() end
+	for _, connection in ipairs(Runtime.Connections) do
+		pcall(function() connection:Disconnect() end)
+	end
+	table.clear(Runtime.Connections)
+	for _, controllerTask in ipairs(Runtime.Tasks) do
+		pcall(function() task.cancel(controllerTask) end)
+	end
+	table.clear(Runtime.Tasks)
 	if Runtime.Physics then Runtime.Physics.Stop() end
 	local character = LocalPlayer.Character
 	local humanoid = character and character:FindFirstChildOfClass("Humanoid")
 	if humanoid then humanoid:UnequipTools() end
+	removeTools(backpack, true)
+	removeTools(character, true)
+	removeActiveMovers()
 	for key in pairs(Package.Sources) do
 		if string.sub(key, 1, 6) == "tools/" then
 			local action = string.split(key, "/")[#string.split(key, "/")]
@@ -19276,13 +19377,14 @@ function Runtime.Stop()
 		local object = Runtime.Created[index]
 		pcall(function() object:Destroy() end)
 	end
+	table.clear(Runtime.OwnedTools)
 	if _G.VRFToPRS == Runtime then _G.VRFToPRS = nil end
 	print("vrftoprs stopped")
 end
 
-Runtime.InputConnection = UserInputService.InputBegan:Connect(function(input)
+Runtime.InputConnection = Runtime.TrackConnection(UserInputService.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.F4 then Runtime.Stop() end
-end)
+end))
 
 print("vrftoprs loaded | F4 = stop")
 return Runtime

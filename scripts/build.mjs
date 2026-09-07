@@ -4,6 +4,15 @@ import path from "node:path";
 const root = path.resolve(import.meta.dirname, "..");
 const sources = {};
 
+// Route every bundled RBXScriptSignal connection through the runtime tracker.
+// Exported sources only use plain property chains plus zero/one-level method
+// calls as Connect receivers (for example RunService.Stepped or
+// value:GetPropertyChangedSignal("Value")).
+function instrumentConnections(source) {
+  const receiver = /([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*(?::[A-Za-z_]\w*\([^()\r\n]*\))?(?:\.[A-Za-z_]\w*)*):Connect\(/gu;
+  return source.replace(receiver, "VRFConnect($1, ");
+}
+
 function walk(directory) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     const file = path.join(directory, entry.name);
@@ -12,7 +21,7 @@ function walk(directory) {
       const relative = path.relative(path.join(root, "src"), file).replaceAll("\\", "/");
       if (relative === "runtime/Bootstrap.lua") continue;
       let key = relative.replace(/\.client\.lua$|\.server\.lua$|\.lua$/u, "");
-      sources[key] = fs.readFileSync(file, "utf8");
+      sources[key] = instrumentConnections(fs.readFileSync(file, "utf8"));
     }
   }
 }
